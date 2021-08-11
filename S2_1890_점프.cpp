@@ -3,7 +3,7 @@
 using namespace std;
 
 int game_board[101][101] = {0, };
-long dp[101][101] = {0, };
+long dp[101][101] = {0, }; // dp는 그냥 long으로 해주자
 
 int main(void)
 {
@@ -31,6 +31,7 @@ int main(void)
             //아래로
             if (down < N)
                 dp[down][j] += dp[i][j];
+            
             //오른쪽으로
             if (right < N)
                 dp[i][right] += dp[i][j];
